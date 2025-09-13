@@ -34,6 +34,15 @@ export const styles = StyleSheet.create({
         color: theme.background,
         fontSize: 18,
         fontWeight: "bold",
+    },
+    inputText: {
+        borderColor: 'gray',
+        width: '90%',
+        height: 50,
+        borderRadius: 10,
+        paddingHorizontal: 20,
+        borderWidth: 1,
+        marginBottom: 20
     }
 })
 
