@@ -1,16 +1,16 @@
 import SuperButton from '@/components/superButton';
 import SuperTitle from '@/components/superTitle';
-import { Button, Image, Text, View } from "react-native";
+import { useState } from 'react';
+import { View } from "react-native";
 
 export default function Index() {
-
+  const [count, setCount] = useState(0);
 
 
   const showMessage = () => {
-    alert("Clicou no botão")
+    setCount(count + 1);
   }
 
-  const uri_image = { uri: "https://picsum.photos/200/300" }
   return (
     <View
       style={{
@@ -19,19 +19,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <SuperTitle title="Bom dia" uppercase></SuperTitle>
-
-      <SuperButton title='Mostra Mensagem' onPress={showMessage}></SuperButton>
-      <SuperTitle title="Boa tarde" uppercase></SuperTitle>
-
-      <Text>Hello World</Text>
-      <View style={{ width: 50, height: 50, backgroundColor: 'red' }} />
-      <Button title="Clique me" onPress={showMessage}></Button>
-      <Image source={uri_image} style={{ width: 100, height: 100 }}></Image>
-      <Image source={require('@/assets/images/react-logo.png')} ></Image>
-
-
-
+      <SuperTitle title={"Contador: " + count} uppercase></SuperTitle>
+      <SuperButton title={'Mais um a ' + count} onPress={showMessage}></SuperButton>
     </View >
   );
 }
