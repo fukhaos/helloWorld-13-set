@@ -22,6 +22,14 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
+    button_disabled: {
+        backgroundColor: "gray",
+        height: 50,
+        width: '90%',
+        borderRadius: 25,
+        alignItems: "center",
+        justifyContent: "center"
+    },
     button_title: {
         color: theme.background,
         fontSize: 18,
